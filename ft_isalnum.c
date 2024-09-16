@@ -1,3 +1,4 @@
+#include <stdio.h>
 int ft_isalpha(char c)
 {
     if  ((c   >=  65 && c <=   90) ||(  c   >=  97 && c  <= 122 ))
@@ -25,5 +26,11 @@ int ft_isalnum(char c)
     if(ft_isalpha (c)    ||  ft_isdigit (c)   )
     return 1;
     else
+    return 0;
+}
+
+int main()
+{
+    printf("%d\n",ft_isalnum('%'));
     return 0;
 }

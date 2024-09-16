@@ -6,3 +6,13 @@ int ft_toupper(char c)
     }
     return c;
 }
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main()
+{
+    char str = 'a';
+    printf("%c",ft_toupper(str));
+    return 0;
+}

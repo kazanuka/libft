@@ -1,4 +1,4 @@
-int ft_isprint(char c)
+int ft_isprint(int c)
 {
     if  ((c   >=  0 && c <=   31) )
     {
@@ -8,4 +8,13 @@ int ft_isprint(char c)
     {
         return 1;
     }
+}
+
+#include <ctype.h>
+#include <stdio.h>
+int main()
+{
+    char c = '0';
+   printf("%d",ft_isprint(c));
+   return 0;
 }

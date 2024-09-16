@@ -1,4 +1,4 @@
-int ft_isascii(char c)
+int ft_isascii(int c)
 {
     if  ((c   >=  0 && c <=   127))
     {
@@ -8,4 +8,13 @@ int ft_isascii(char c)
     {
         return 0;
     }
+}
+
+#include <ctype.h>
+#include <stdio.h>
+int main()
+{
+    char c = 'ş';
+   printf("%d",isascii(c));
+   return 0;
 }
