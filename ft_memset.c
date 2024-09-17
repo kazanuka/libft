@@ -1,5 +1,5 @@
 #include "libft.h"
-void *ft_memset (void *s, int c, unsigned int n)
+void *ft_memset (void *s, int c, unsigned int n)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     unsigned char *p = (unsigned char *)s;
 

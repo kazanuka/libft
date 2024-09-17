@@ -1,6 +1,6 @@
 #include "libft.h"  // standart header file for size_t
 
-size_t ft_strlcpy(char *dest, const char *src, size_t maxlen)
+size_t ft_strlcpy(char *dest, const char *src, size_t maxlen)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     int srcSize = ft_strlen(src);
     if(srcSize + 1 > maxlen)

@@ -1,3 +1,4 @@
+//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 #include "libft.h" 
 int ft_isascii(int c)
 {

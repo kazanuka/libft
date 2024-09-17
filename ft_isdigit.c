@@ -1,5 +1,5 @@
 #include "libft.h"
-int ft_isdigit(int c)
+int ft_isdigit(int c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     if(c >= 48 && c <=  57)
     {

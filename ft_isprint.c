@@ -1,5 +1,5 @@
 #include "libft.h"
-int ft_isprint(int c)
+int ft_isprint(int c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     if  ((c   >=  0 && c <=   31) )
     {

@@ -1,5 +1,5 @@
 #include "libft.h"
-void* ft_memmove (void *dest, const void *src, unsigned int n)
+void* ft_memmove (void *dest, const void *src, unsigned int n)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     unsigned char *p = (unsigned char*)src;
     unsigned char *q = (unsigned char*)dest;

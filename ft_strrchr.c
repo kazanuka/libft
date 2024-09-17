@@ -1,7 +1,7 @@
 #include "libft.h"//bir kere daha kontrol et, strlen tanımlı değl.
 #include <string.h>
 
-char *ft_strrchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     unsigned int len;
     unsigned int i;

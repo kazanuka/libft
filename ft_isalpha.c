@@ -1,4 +1,5 @@
 #include "libft.h"
+//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 int ft_isalpha(char c)
 {
     if  ((c   >=  65 && c <=   90) ||(  c   >=  97 && c  <= 122 ))

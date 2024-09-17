@@ -1,5 +1,5 @@
 #include "libft.h"
-int ft_toupper(char c)
+int ft_toupper(char c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     if(c >= 97 && c <= 122)
     {

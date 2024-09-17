@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "libft.h"
-void* ft_memcpy (void *dest, const void *src, unsigned int n)
+void* ft_memcpy (void *dest, const void *src, unsigned int n)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     unsigned char *p = (unsigned char*)src;
     unsigned char *q = (unsigned char*)dest;

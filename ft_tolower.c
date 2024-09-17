@@ -1,5 +1,5 @@
 #include "libft.h"
-int ft_tolower(char c)
+int ft_tolower(char c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
 {
     if(c >= 65 && c <= 90)
     {
