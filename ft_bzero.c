@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "libft.h"
 void    ft_bzero(void *s, unsigned int n)
 {
     int i;

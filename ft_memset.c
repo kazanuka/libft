@@ -1,3 +1,4 @@
+#include "libft.h"
 void *ft_memset (void *s, int c, unsigned int n)
 {
     unsigned char *p = (unsigned char *)s;
