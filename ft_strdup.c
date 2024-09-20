@@ -9,7 +9,7 @@ char *ft_strdup(const char *s)
     adress = malloc(strlen(s)+1);
     if(adress == NULL)
         return NULL;
-    memcpy(adress,s,strlen(s)+1);
+    ft_memcpy(adress,s,strlen(s)+1);
     return adress;
 }
 /*

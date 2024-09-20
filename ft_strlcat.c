@@ -1,17 +1,6 @@
 #include "libft.h"  
 #include <stdio.h>
 #include <string.h>
-/*
-size_t ft_strlen(const char *s)
-{
-    size_t i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    return i;
-}
-*/
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)//size stands for maximum size of destination
 {
