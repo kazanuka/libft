@@ -9,15 +9,21 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
     char *address;
     if (!s) 
         return NULL;
+
     if (start >= ft_strlen(s))
 		return ft_strdup("");//sadece null karakter döndürmesi için.
+
     size = ft_strlen(s + start);
+
 	if (size < len)
 		len = size;
+
     firstC = &s[start];
     address = (char*)malloc(len+1);
+    
     if(address == NULL)
         return NULL;
+        
     ft_memcpy(address,firstC,len);
     address[len] = '\0';
     return address;
