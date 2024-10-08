@@ -1,22 +1,25 @@
-//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-#include "libft.h" 
-int ft_isascii(int c)
-{
-    if  ((c   >=  0 && c <=   127))
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 11:44:11 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 17:51:39 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
-int main()
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
-    char c = 'ş';
-   printf("%d",isascii(c));
-   return 0;
+	if ((c >= 0 && c <= 127))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }

@@ -1,35 +1,26 @@
-#include <stdlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 11:43:35 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 17:37:55 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-void *ft_calloc(size_t nmemb, size_t size)
+
+void	*ft_calloc(size_t count, size_t size)
 {
-    void *address;
-    if(nmemb == 0 || size == 0)
-        return NULL;
-    address = malloc(nmemb*size);
-    if (address == NULL)
-        return NULL;
-    ft_memset(address,0,nmemb*size);
-    return address;
+	void	*address;
+
+	if (count == 0 || size == 0)
+		return (NULL);
+	address = malloc (count * size);
+	if (address == NULL)
+		return (NULL);
+	ft_memset(address, 0, count * size);
+	return (address);
 }
-/*
-int main() {
-    size_t nmemb = 5;
-    size_t size = sizeof(int);
-    int *array = ft_calloc(nmemb, size);
-
-    if (array == NULL) {
-        printf("Bellek ayıramadık!\n");
-        return 1;
-    }
-
-    // Array elemanlarını kontrol et
-    for (size_t i = 0; i < nmemb; i++) {
-        printf("array[%zu] = %d\n", i, array[i]);
-    }
-
-    // Belleği serbest bırak
-    free(array);
-
-    return 0;
-}
-*/

@@ -1,19 +1,22 @@
-#include "libft.h"
-int ft_toupper(char c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-{
-    if(c >= 97 && c <= 122)
-    {
-        c -= 32;
-    }
-    return c;
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:02:00 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 20:02:06 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-int main()
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-    char str = 'a';
-    printf("%c",ft_toupper(str));
-    return 0;
+	if (c >= 97 && c <= 122)
+	{
+		c -= 32;
+	}
+	return (c);
 }

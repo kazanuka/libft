@@ -1,22 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 11:46:39 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 17:52:41 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-int ft_isdigit(int c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
+
+int	ft_isdigit(int c)
 {
-    if(c >= 48 && c <=  57)
-    {
-        return 1;
-    }
-    return 0;
-}
-#include <ctype.h>
-#include <stdio.h>
-#include <unistd.h> 
-int main()
-{
-     int result = ft_isdigit('5');
-    
-    // Sonucu bir karaktere dönüştür
-    char result_char = result ? '1' : '0';
-    
-    // Karakteri yazdır
-    write(1, &result_char, 1);
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	return (0);
 }

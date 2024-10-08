@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:01:09 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 18:39:57 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-//TESTLER GERÇEKLEŞTİRİLMEDİ
+
 int	count_words(char const *s, char c)
 {
-	char    *q;
-	int	count;
+	char	*q;
+	int		count;
 
-	q = (char*)s;
+	q = (char *)s;
 	count = 0;
 	while (*q)
 	{
@@ -21,13 +33,12 @@ int	count_words(char const *s, char c)
 	return (count);
 }
 
-//i kelimelerin içinde dolaşırken j, karakterlerin içinde dolaşıyor.
 char	**ft_split(char const *s, char c)
 {
-	char	**str_arr;
-	size_t	i;
-	int		j;
-	size_t	count;
+	char		**str_arr;
+	size_t		i;
+	int			j;
+	size_t		count;
 
 	if (!s)
 		return (0);

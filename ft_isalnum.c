@@ -1,38 +1,21 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 11:43:44 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 17:39:37 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-int ft_isalpha(char c)
-{
-    if  ((c   >=  65 && c <=   90) ||(  c   >=  97 && c  <= 122 ))
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
 
-int ft_isdigit(char c)
+int	ft_isalnum(int c)
 {
-    if(c >= 48 && c <=  57)
-    {
-        return 1;
-    }
-    return 0;
-}
-
-
-int ft_isalnum(char c)
-{
-    if(ft_isalpha (c)    ||  ft_isdigit (c)   )
-    return 1;
-    else
-    return 0;
-}
-
-int main()
-{
-    printf("%d\n",ft_isalnum('%'));
-    return 0;
+	if (ft_isalpha (c) || ft_isdigit (c))
+		return (1);
+	else
+		return (0);
 }

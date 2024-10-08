@@ -1,19 +1,22 @@
-#include "libft.h"
-int ft_tolower(char c)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-{
-    if(c >= 65 && c <= 90)
-    {
-        c += 32;
-    }
-    return c;
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:01:57 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 20:01:21 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-int main()
+#include "libft.h"
+
+int	ft_tolower(int c)
 {
-    char str = 'a';
-    printf("%c",ft_tolower(str));
-    return 0;
+	if (c >= 65 && c <= 90)
+	{
+		c += 32;
+	}
+	return (c);
 }

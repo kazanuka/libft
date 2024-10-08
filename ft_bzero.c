@@ -1,25 +1,27 @@
-#include <stdio.h>
-#include <string.h>
-#include "libft.h"
-//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-void    ft_bzero(void *s, unsigned int n)
-{
-    int i;
-    i = 0;
-     unsigned char *p = s;
-    while(i < n)
-    {
-        
-        *p++ = '\0';
-        i++;
-    }
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 11:43:29 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 17:34:28 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main()
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    char z[] = "kuyumcu";
-    ft_bzero(z, 3);  // İlk 3 karakteri sıfırlar
-    
-    printf("%s", z);  // Sonuç: "umcu" olacaktır
-    return 0;
+	size_t			i;
+	unsigned char	*p;
+
+	i = 0;
+	p = s;
+	while (i < n)
+	{
+		*p++ = '\0';
+		i++;
+	}
 }

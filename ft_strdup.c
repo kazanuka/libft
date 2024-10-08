@@ -1,30 +1,24 @@
-#include "libft.h"
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:01:17 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 19:25:11 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strdup(const char *s)
+#include "libft.h"
+
+char	*ft_strdup(const char *s1)
 {
-    char *adress;
-    adress = malloc(strlen(s)+1);
-    if(adress == NULL)
-        return NULL;
-    ft_memcpy(adress,s,strlen(s)+1);
-    return adress;
+	char	*adress;
+
+	adress = malloc(strlen(s1)+1);
+	if (adress == NULL)
+		return (NULL);
+	ft_memcpy(adress, s1, strlen(s1) + 1);
+	return (adress);
 }
-/*
-int main() {
-    const char *original = "Hello, World!";
-    char *duplicate = ft_strdup(original);
-    
-    if (duplicate == NULL) {
-        return 1;
-    }
-    
-    printf("Orijinal: %s\n", original);
-    printf("Kopya: %s\n", duplicate);
-    
-    free(duplicate);
-    return 0;
-}
-*/

@@ -1,47 +1,32 @@
-#include "libft.h"  
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:01:26 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 19:35:05 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)//size stands for maximum size of destination
+#include "libft.h"  
+
+size_t	ft_strlcat(char *dst, const char *src, size_t n)
 {
 	unsigned int	i;
 	unsigned int	j;
-    //i is for index of destination and j is for index of source
+
 	i = 0;
 	j = 0;
-	while (dst[i] && i < size)
-        i++;
-    //at the end of this block, we measured the length of dest buffer. the function below is to determine if there's a space for nul-termination. if not, skip copying.
-	while (src[j] && (i + j + 1) < size)
+	while (dst[i] && i < n)
+		i++;
+	while (src[j] && (i + j + 1) < n)
 	{
 		dst[i + j] = src[j];
 		j++;
 	}
-	if (i < size)
+	if (i < n)
 		dst[i + j] = '\0';
 	return (ft_strlen(dst));
-    //return the final length of destination.
 }
-
-/*
-int main(void)
-{
-    char dest[20] = "Hello, ";
-    char src[] = "World!";
-    size_t size = sizeof(dest);  // Destin toplam boyutu
-    size_t result;
-
-    printf("Before strlcat:\n");
-    printf("Destination: '%s'\n", dest);
-    printf("Source: '%s'\n", src);
-
-    // ft_strlcat fonksiyonunu test et
-    result = ft_strlcat(dest, src, size);
-
-    printf("\nAfter strlcat:\n");
-    printf("Destination: '%s'\n", dest);
-    printf("Total length (return value): %zu\n", result);
-
-    return 0;
-}
-*/

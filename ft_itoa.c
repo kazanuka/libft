@@ -1,36 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:00:19 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/08 13:46:49 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-/*
-#include <stdio.h>
-#include <stdint.h>
-*/
-int ft_count_digits(int n) {
-    int count = 0;
 
-    if (n < 0) {
-        n = -n;
-        ++count;
-    }
+int	ft_count_digits(int n)
+{
+	int	count;
 
-    if (n == 0)
-        return 1;
-
-    while (n != 0) {
-        n = n / 10;
-        ++count;
-    }
-
-    return count;
+	count = 0;
+	if (n < 0)
+	{
+		n = -n;
+		++count;
+	}
+	if (n == 0)
+		return (1);
+	while (n != 0)
+	{
+		n = (n / 10);
+		++count;
+	}
+	return (count);
 }
 
-
-
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    char	*address;
+	char	*address;
 	int		count;
 
 	count = ft_count_digits(n);
-	address = malloc(sizeof(char)*(count + 1));
+	address = malloc(sizeof(char) * (count + 1));
 	if (NULL == address)
 		return (NULL);
 	address[count] = '\0';
@@ -39,37 +47,12 @@ char *ft_itoa(int n)
 	else if (n < 0)
 		address[0] = '-';
 	while (n)
-	{	
+	{
 		if (n < 0)
 			address[--count] = (~(n % 10) + 1) + 48;
 		else
 			address[--count] = (n % 10) + 48;
-		n = n/10;
-	}	
+		n = (n / 10);
+	}
 	return (address);
 }
-
-
-/*
-int main()
-{
-  char *str = ft_itoa(-2134);
-  printf("%s\n", str);
-
-  str = ft_itoa(42);
-  printf("%s\n", str);
-  str = ft_itoa(707);
-  printf("%s\n", str);
-
-  str = ft_itoa(INT32_MIN);
-  printf("%s\n", str);
-
-  str = ft_itoa(INT32_MAX);
-  printf("%s\n", str);
-  
-  str = ft_itoa(0);
-  printf("%s\n", str);
-
-  return 0;
-}
-*/

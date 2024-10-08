@@ -1,32 +1,28 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:00:53 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 18:28:50 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-void *ft_memset (void *s, int c, unsigned int n)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
+
+void	*ft_memset(void *b, int c, size_t n)
 {
-    unsigned char *p = (unsigned char *)s;
+	unsigned char	*p;
+	size_t			i;
 
-    int i;
-    i = 0;
-    while(i < n)
-    {
-        *p++ = c;
-        i++;
-    }
-    return s;
-}
-
-#include <stdio.h>
-#include <string.h>
-
-int main()
-{
-    // Bir char dizisi tanımla
-    char buffer[20];
-    
-    // Diziyi 'A' karakteri ile doldur
-    ft_memset(buffer, 'a', sizeof(buffer) - 1); // Sonunda null karakter için -1
-    buffer[sizeof(buffer) - 1] = '\0'; // Dizinin sonuna null karakter ekle
-    
-    // Dizinin içeriğini yazdır
-    printf("Dizinin içeriği: %s\n", buffer);
-    
-    return 0;
+	p = (unsigned char *)b;
+	i = 0;
+	while (i < n)
+	{
+		*p++ = c;
+		i++;
+	}
+	return (b);
 }

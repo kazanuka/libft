@@ -1,27 +1,29 @@
-#include "libft.h"
-void* ft_memmove (void *dest, const void *src, unsigned int n)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-{
-    unsigned char *p = (unsigned char*)src;
-    unsigned char *q = (unsigned char*)dest;
-    char temp[n];
-    //p defined as source char and q defined as dest char
-    while   (n--)
-    {
-        temp[n] = p[n];
-        q[n] = temp[n];
-    }
-    return dest;
-}
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:00:51 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/08 13:46:29 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main() {
-    char src[] = "Merhaba";
-    char dest[10];
-    
-    // Üst üste gelme olan durum (memmove kullanılmalıdır)
-    ft_memmove(dest, src, sizeof(src)-1);
-    printf("dest: %s\n", dest); // Çıktı: Merhaba
-    
-    return 0;
+#include "libft.h"
+
+void	*ft_memmove(void *dst, const void *src, size_t n)
+{
+	const unsigned char	*s;
+	unsigned char		*d;
+
+	if (!dst && !src)
+		return (dst);
+	if (dst < src)
+		return (ft_memcpy(dst, src, n));
+	s = (unsigned char *)src;
+	d = (unsigned char *)dst;
+	while (n--)
+		d[n] = s[n];
+	return (dst);
 }

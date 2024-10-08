@@ -1,19 +1,25 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:01:32 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 19:39:18 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-size_t ft_strlen(const char *s)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
+
+size_t	ft_strlen(const char *s)
 {
-    size_t i = 0;
-    while (s[i] != '\0')
-    {
-        i++;
-    }
-    return i;
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
-/*
-int main()
-{
-    const char *str = "hello";
-    printf("Length of the string: %zu\n", ft_strlen(str));
-    return 0;
-}
-*/

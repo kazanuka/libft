@@ -1,23 +1,27 @@
-#include <stdio.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 12:00:48 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 18:12:32 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-void* ft_memcpy (void *dest, const void *src, unsigned int n)//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-{
-    unsigned char *p = (unsigned char*)src;
-    unsigned char *q = (unsigned char*)dest;
-    while   (n--)
-    {
-        q[n] = p[n];
-    }
-    return dest;
-}
 
-int main()
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-    char *s = "furkan";
-    char *z = "kuyumcu";
-    ft_memcpy(&z,&s,5);
+	unsigned char	*p;
+	unsigned char	*q;
 
-    printf("%s\n",z);
-    return 0;
+	p = (unsigned char *) src;
+	q = (unsigned char *) dest;
+	while (n--)
+	{
+		q[n] = p[n];
+	}
+	return (dest);
 }

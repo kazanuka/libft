@@ -1,19 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 11:43:51 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/07 17:42:39 by fkuyumcu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-//Metodda kullanılan değişken isimlerini tekrar kontrol et! BSD'nin manuel sayfasından alındı.
-int ft_isalpha(char c)
+
+int	ft_isalpha(int c)
 {
-    if  ((c   >=  65 && c <=   90) ||(  c   >=  97 && c  <= 122 ))
-    {
-        return 1;
-    }
-    else
-    {
-        return 0;
-    }
-}
-#include <stdio.h>
-int main()
-{
-   printf("%d",ft_isalpha('0'));
-   return 0;
+	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
