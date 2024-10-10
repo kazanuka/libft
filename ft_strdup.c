@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:01:17 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/07 19:25:11 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/09 15:44:21 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ char	*ft_strdup(const char *s1)
 {
 	char	*adress;
 
-	adress = malloc(strlen(s1)+1);
+	adress = malloc(ft_strlen(s1)+1);
 	if (adress == NULL)
 		return (NULL);
-	ft_memcpy(adress, s1, strlen(s1) + 1);
+	ft_memcpy(adress, s1, ft_strlen(s1) + 1);
 	return (adress);
 }

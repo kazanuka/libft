@@ -1,22 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/07 12:00:10 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/09 16:19:48 by fkuyumcu         ###   ########.fr       */
+/*   Created: 2024/10/08 15:13:27 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/09 13:47:29 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+void	ft_lstadd_front(t_list **lst, t_list *new)//**lst root node
 {
-	if ((c >= 32 && c <= 126))
+	t_list	*root;
+
+	root = *lst;
+	if (!new)
+		return ;
+	if (!*lst)
 	{
-		return (1);
+		*lst = new;
+		return ;
 	}
-	return (0);
+	new->next = new;
+	root = new;
 }

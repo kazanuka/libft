@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:00:51 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/08 13:46:29 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/09 18:38:24 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,21 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	const unsigned char	*s;
 	unsigned char		*d;
-
+	const unsigned char	*s;
+	size_t i;
+	
+	i = 0;
 	if (!dst && !src)
 		return (dst);
-	if (dst < src)
+	if (dst >= src)
 		return (ft_memcpy(dst, src, n));
-	s = (unsigned char *)src;
 	d = (unsigned char *)dst;
+	s = (const unsigned char *)src;
 	while (n--)
-		d[n] = s[n];
+	{
+		*d++ = *s++;
+	}
 	return (dst);
 }
+
