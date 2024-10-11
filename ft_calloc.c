@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:43:35 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/11 11:12:08 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/11 14:25:38 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*address;
 
-	if (count == 0 || size == 0)
-		return (NULL);
 	address = malloc (count * size);
 	if (address == NULL)
 		return (NULL);
