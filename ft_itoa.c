@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:00:19 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/08 13:46:49 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/12 14:39:48 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_digits(int n)
+static int	ft_count_digits(int n)
 {
 	int	count;
 

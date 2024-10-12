@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 20:02:50 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/11 18:00:15 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/12 14:38:03 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <string.h>
-# include <stdio.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
