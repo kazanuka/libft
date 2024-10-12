@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:01:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/12 09:48:41 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/12 10:20:03 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static	int	count_words(char const *s, char c)
+static int	count_tokens(char const *s, char c)
 {
 	char	*q;
 	int		count;
@@ -42,7 +42,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (0);
-	count = count_words(s, c);
+	count = count_tokens(s, c);
 	str_arr = malloc(sizeof(char *) * (count + 1));
 	if (!str_arr)
 		return (0);
