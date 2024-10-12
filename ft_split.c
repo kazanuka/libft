@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:01:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/11 11:24:25 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/12 09:48:41 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char const *s, char c)
+static	int	count_words(char const *s, char c)
 {
 	char	*q;
 	int		count;

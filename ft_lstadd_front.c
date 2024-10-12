@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:13:27 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/11 17:46:52 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/12 10:01:06 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)//**lst root node
 {
-	t_list	*root;
+	t_list	*head;
 
-	root = *lst;
+	head = *lst;
 	if (!new)
 		return ;
 	if (!*lst)
 	{
-		*lst = new;
+		*lst = new ;
 		return ;
 	}
-	new->next = new;
-	root = new;
+	new->next = head;
+	*lst = new;
 }
