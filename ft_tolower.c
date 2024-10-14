@@ -6,11 +6,9 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:01:57 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/07 20:01:21 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/13 14:08:01 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {

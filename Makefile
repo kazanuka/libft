@@ -67,6 +67,6 @@ fclean: clean
 re: fclean all
 
 bonus: $(BONUS_OBJECTS)
-	ar rcs $(NAME) $(BONUS_OBJECTS)
+	ar -r -c $(NAME) $(BONUS_OBJECTS)
 
-.PHONY: all, clean, fclean, re
+.PHONY: all, clean, fclean, re, bonus

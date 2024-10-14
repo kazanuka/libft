@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 15:13:27 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/12 10:01:06 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/13 19:43:13 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)//**lst root node
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	t_list	*head;
 

@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:01:09 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/12 10:20:03 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/13 20:03:06 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ static int	count_tokens(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char		**str_arr;
-	size_t		i;
+	int			i;
 	int			j;
-	size_t		count;
+	int			count;
 
 	if (!s)
 		return (0);

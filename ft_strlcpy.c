@@ -6,11 +6,11 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:01:30 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/11 14:22:59 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/13 19:50:48 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"  // standart header file for size_t
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {

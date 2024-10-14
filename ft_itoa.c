@@ -6,7 +6,7 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:00:19 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/12 14:39:48 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/13 21:29:32 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_itoa(int n)
 	if (NULL == address)
 		return (NULL);
 	address[count] = '\0';
-	if (0 == n)
+	if (n == 0)
 		address[0] = '0';
 	else if (n < 0)
 		address[0] = '-';
