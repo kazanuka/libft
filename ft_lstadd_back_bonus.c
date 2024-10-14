@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/09 11:47:04 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/13 19:49:15 by fkuyumcu         ###   ########.fr       */
+/*   Created: 2024/10/08 17:24:02 by fkuyumcu          #+#    #+#             */
+/*   Updated: 2024/10/14 15:45:23 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "bonus.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	t_list	*current;
-	t_list	*next;
+	t_list	*last;
 
-	current = *lst;
-	while (current)
+	last = *lst;
+	if (!new)
+		return ;
+	if (!*lst)
 	{
-		next = current->next;
-		del(current->content);
-		free(current);
-		current = next;
+		*lst = new;
+		return ;
 	}
-	*lst = NULL;
+	while (last->next)
+		last = last->next;
+	last->next = new;
 }
