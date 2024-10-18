@@ -66,10 +66,6 @@ fclean: clean
 
 re: fclean all
 
-run:
-	gcc main.c libft.a
-	./a.out
-
 bonus: $(BONUS_OBJECTS)
 	ar -r -c $(NAME) $(BONUS_OBJECTS)
 
