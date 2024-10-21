@@ -44,7 +44,7 @@ BONUS 	= 	ft_lstnew_bonus.c \
 		  	ft_lstclear_bonus.c \
 		  	ft_lstiter_bonus.c \
 
-CC	= gcc
+CC	= cc
 
 CFLAGS	= -Wall -Werror -Wextra
 

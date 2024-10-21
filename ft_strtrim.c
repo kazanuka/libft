@@ -6,13 +6,13 @@
 /*   By: fkuyumcu <fkuyumcu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:01:51 by fkuyumcu          #+#    #+#             */
-/*   Updated: 2024/10/12 14:54:25 by fkuyumcu         ###   ########.fr       */
+/*   Updated: 2024/10/19 09:13:38 by fkuyumcu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)//set stand for set of chars
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	size;
 	char	*str;
